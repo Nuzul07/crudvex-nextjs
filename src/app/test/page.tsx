@@ -98,7 +98,7 @@ export default function ProductsPage() {
               onChange={(e) => set("category", e.target.value)}
               disabled={readonly}
               className="mt-1 w-full rounded-lg border border-gray-200 text-gray-600 bg-white px-3 py-2 text-sm outline-none focus:border-blue-400 disabled:bg-gray-50"
-              placeholder="misal: men's clothing"
+              placeholder="misal: pakaian pria"
             />
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function ProductsPage() {
           <input
             value={value.image}
             onChange={(e) => set("image", e.target.value)}
-            disabled={mode === "edit" || readonly}
+            disabled={readonly}
             className="mt-1 w-full rounded-lg border border-gray-200 text-gray-600 bg-white px-3 py-2 text-sm outline-none focus:border-blue-400 disabled:bg-gray-50"
             placeholder="http://example.com"
           />
@@ -183,7 +183,7 @@ export default function ProductsPage() {
             <button
               disabled={busy}
               onClick={onClose}
-              className="rounded-lg border px-3 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 disabled:opacity-50"
+              className="rounded-lg border px-3 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 disabled:opacity-50"
             >
               Batal
             </button>
@@ -304,7 +304,7 @@ export default function ProductsPage() {
                 onClose();
               }
             }}
-            className="rounded-lg border px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50 cursor-pointer"
+            className="rounded-lg border px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 disabled:opacity-50 cursor-pointer"
           >
             {editMode ? "Batal Edit" : "Tutup"}
           </button>
@@ -652,7 +652,7 @@ export default function ProductsPage() {
                   <button
                     disabled={page <= 1}
                     onClick={() => setPage((p) => p - 1)}
-                    className="rounded-lg border px-3 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 disabled:opacity-50"
+                    className="rounded-lg border px-3 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 disabled:opacity-50"
                   >
                     Kembali
                   </button>
@@ -666,7 +666,7 @@ export default function ProductsPage() {
                         <button
                           key={n}
                           onClick={() => setPage(n)}
-                          className={`h-9 w-9 rounded-lg text-sm cursor-pointer ${active ? "bg-black text-white" : "border text-gray-700 hover:bg-gray-50"}`}
+                          className={`h-9 w-9 rounded-lg text-sm cursor-pointer ${active ? "bg-black text-white" : "border text-gray-700 hover:bg-gray-100"}`}
                         >
                           {n}
                         </button>
@@ -680,7 +680,7 @@ export default function ProductsPage() {
                   <button
                     disabled={page >= totalPages}
                     onClick={() => setPage((p) => p + 1)}
-                    className="rounded-lg border px-3 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-50 disabled:opacity-50"
+                    className="rounded-lg border px-3 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-100 disabled:opacity-50"
                   >
                     Lanjut
                   </button>
